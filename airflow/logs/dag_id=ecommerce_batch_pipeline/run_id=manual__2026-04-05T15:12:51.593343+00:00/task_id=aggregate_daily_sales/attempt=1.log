@@ -1,0 +1,14 @@
+[2026-04-05T15:12:53.612+0000] {taskinstance.py:1957} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: ecommerce_batch_pipeline.aggregate_daily_sales manual__2026-04-05T15:12:51.593343+00:00 [queued]>
+[2026-04-05T15:12:53.617+0000] {taskinstance.py:1957} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: ecommerce_batch_pipeline.aggregate_daily_sales manual__2026-04-05T15:12:51.593343+00:00 [queued]>
+[2026-04-05T15:12:53.617+0000] {taskinstance.py:2171} INFO - Starting attempt 1 of 3
+[2026-04-05T15:12:53.624+0000] {taskinstance.py:2192} INFO - Executing <Task(PythonOperator): aggregate_daily_sales> on 2026-04-05 15:12:51.593343+00:00
+[2026-04-05T15:12:53.625+0000] {standard_task_runner.py:60} INFO - Started process 351 to run task
+[2026-04-05T15:12:53.628+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'ecommerce_batch_pipeline', 'aggregate_daily_sales', 'manual__2026-04-05T15:12:51.593343+00:00', '--job-id', '8', '--raw', '--subdir', 'DAGS_FOLDER/pipeline_dag.py', '--cfg-path', '/tmp/tmp25s5abhp']
+[2026-04-05T15:12:53.630+0000] {standard_task_runner.py:88} INFO - Job 8: Subtask aggregate_daily_sales
+[2026-04-05T15:12:53.658+0000] {task_command.py:423} INFO - Running <TaskInstance: ecommerce_batch_pipeline.aggregate_daily_sales manual__2026-04-05T15:12:51.593343+00:00 [running]> on host d880ccc0fee1
+[2026-04-05T15:12:53.691+0000] {taskinstance.py:2481} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='data_engineer' AIRFLOW_CTX_DAG_ID='ecommerce_batch_pipeline' AIRFLOW_CTX_TASK_ID='aggregate_daily_sales' AIRFLOW_CTX_EXECUTION_DATE='2026-04-05T15:12:51.593343+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-04-05T15:12:51.593343+00:00'
+[2026-04-05T15:12:53.695+0000] {pipeline_dag.py:111} INFO - ✓ Daily aggregation complete — 24 rows in agg_daily_sales
+[2026-04-05T15:12:53.696+0000] {python.py:201} INFO - Done. Returned value was: None
+[2026-04-05T15:12:53.700+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=ecommerce_batch_pipeline, task_id=aggregate_daily_sales, execution_date=20260405T151251, start_date=20260405T151253, end_date=20260405T151253
+[2026-04-05T15:12:53.726+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2026-04-05T15:12:53.735+0000] {taskinstance.py:3281} INFO - 2 downstream tasks scheduled from follow-on schedule check

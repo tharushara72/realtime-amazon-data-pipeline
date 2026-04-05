@@ -1,0 +1,19 @@
+[2026-04-05T15:12:54.701+0000] {taskinstance.py:1957} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: ecommerce_batch_pipeline.compute_revenue_summary manual__2026-04-05T15:12:51.593343+00:00 [queued]>
+[2026-04-05T15:12:54.707+0000] {taskinstance.py:1957} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: ecommerce_batch_pipeline.compute_revenue_summary manual__2026-04-05T15:12:51.593343+00:00 [queued]>
+[2026-04-05T15:12:54.707+0000] {taskinstance.py:2171} INFO - Starting attempt 1 of 3
+[2026-04-05T15:12:54.711+0000] {taskinstance.py:2192} INFO - Executing <Task(PythonOperator): compute_revenue_summary> on 2026-04-05 15:12:51.593343+00:00
+[2026-04-05T15:12:54.713+0000] {standard_task_runner.py:60} INFO - Started process 355 to run task
+[2026-04-05T15:12:54.714+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'ecommerce_batch_pipeline', 'compute_revenue_summary', 'manual__2026-04-05T15:12:51.593343+00:00', '--job-id', '10', '--raw', '--subdir', 'DAGS_FOLDER/pipeline_dag.py', '--cfg-path', '/tmp/tmpeiv87uvi']
+[2026-04-05T15:12:54.715+0000] {standard_task_runner.py:88} INFO - Job 10: Subtask compute_revenue_summary
+[2026-04-05T15:12:54.732+0000] {task_command.py:423} INFO - Running <TaskInstance: ecommerce_batch_pipeline.compute_revenue_summary manual__2026-04-05T15:12:51.593343+00:00 [running]> on host d880ccc0fee1
+[2026-04-05T15:12:54.762+0000] {taskinstance.py:2481} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='data_engineer' AIRFLOW_CTX_DAG_ID='ecommerce_batch_pipeline' AIRFLOW_CTX_TASK_ID='compute_revenue_summary' AIRFLOW_CTX_EXECUTION_DATE='2026-04-05T15:12:51.593343+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-04-05T15:12:51.593343+00:00'
+[2026-04-05T15:12:54.765+0000] {pipeline_dag.py:135} INFO - === Revenue by Category ===
+[2026-04-05T15:12:54.765+0000] {pipeline_dag.py:137} INFO -   Electronics     orders=  340 revenue=$ 730243.93 profit=$ 269875.17
+[2026-04-05T15:12:54.765+0000] {pipeline_dag.py:137} INFO -   Home            orders=  364 revenue=$ 253589.50 profit=$  95634.72
+[2026-04-05T15:12:54.765+0000] {pipeline_dag.py:137} INFO -   Clothing        orders=  360 revenue=$ 100775.41 profit=$  37940.10
+[2026-04-05T15:12:54.765+0000] {pipeline_dag.py:137} INFO -   Food            orders=  357 revenue=$  38288.42 profit=$  14586.20
+[2026-04-05T15:12:54.765+0000] {pipeline_dag.py:137} INFO -   Books           orders=  366 revenue=$  32807.28 profit=$  12187.59
+[2026-04-05T15:12:54.765+0000] {python.py:201} INFO - Done. Returned value was: None
+[2026-04-05T15:12:54.769+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=ecommerce_batch_pipeline, task_id=compute_revenue_summary, execution_date=20260405T151251, start_date=20260405T151254, end_date=20260405T151254
+[2026-04-05T15:12:54.811+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2026-04-05T15:12:54.820+0000] {taskinstance.py:3281} INFO - 0 downstream tasks scheduled from follow-on schedule check
