@@ -14,6 +14,7 @@ A production-grade end-to-end data engineering project simulating an Amazon-styl
 | Python + uv | Data generation & processing |
 
 ## Architecture
+![Dashboard Screenshot](./ecommerce_data_pipeline_architecture.svg)
 **Orders API → Kafka Topics → Spark Consumer → PostgreSQL → Airflow DAG → Power BI**
 
 ## Data Model (Star Schema)
